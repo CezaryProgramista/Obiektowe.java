@@ -1,0 +1,80 @@
+I. Utwórz klasê Stuff, która bêdzie reprezentowa³a przedmioty. Klasa powinna posiadaæ
+prywatne pola name oraz weight, które bêd¹ zainicjowane w konstruktorze. Przes³oñ
+metodê toString aby wypisywa³a informacje o przedmiocie.
+
+
+II. Utwórz klasê Weapon, która bêdzie dziedziczy³a po klasie Stuff. Klasa bêdzie mia³a pola
+baseAttack okreœlaj¹c¹ si³ê broni oraz bonus, okreœlaj¹cy procentowy bonus do ataku.
+
+
+III. Stwórz klasê Avatar posiadaj¹c¹ pola prywatne characterName, health,
+hand(przechowuje obiekt klasy Stuff). Stwórz konstruktor inicjuj¹cy pola characterName
+oraz health, natomiast pole hand zainicjuj elementem pustym. Stwórz odpowiednie
+gettery i settery do pól klasy. Zaimplementuj metodê isAlive(), która zwraca wartoœæ typu
+logicznego, okreœlaj¹c¹ czy wartoœæ pola health jest powy¿ej zera. Zaimplementuj tak¿e
+metodê attack(), której za zadaniem bêdzie sprawdzenie czy w rêce posiadamy obiekt
+typu Weapon oraz zwrócenia jego wartoœci baseAttack, b¹dŸ wartoœci 0 w przeciwnym
+przypadku. Przes³oñ metodê toString, tak aby zwraca³a informacjê na temat danego
+obiektu.
+
+
+IV. Stwórz klasê Monster, która bêdzie reprezentowa³a potwora za pomoc¹ pól:
+- health, okreœlaj¹c¹ zdrowie
+- attackPower, okreœlaj¹c¹ si³ê ataku
+- attackChance, okreœlaj¹c¹ procentow¹ szansê na udany atak
+Nastêpnie zaimplementuj konstruktor inicjuj¹cy pola, a tak¿e metodê attack(), która
+zwróci wartoœæ attackPower, gdy atak bêdzie udany, b¹dŸ 0 wpp. Okreœlenie, czy atak
+siê powiód³ powinno zostaæ zrealizowane w sposób losowy tj. wylosuj wartoœæ, a
+nastêpnie sprawdŸ, czy ta wartoœæ jest poni¿ej wartoœci pola attackChance.
+Zaimplementuj tak¿e metodê isAlive() okreœlaj¹c¹ czy wartoœæ pola health jest wiêksza
+od 0.
+
+
+V. Zaimplementuj metodê hurt(double), która bêdzie przyjmowaæ argument typu double, a
+jej zadaniem bêdzie pomniejszenie pola health o podan¹ wartoœæ. Metodê
+zaimplementuj zarówno w klasie Avatar, jak i Monster.
+
+
+VI. Stwórz klasê Arena, która bêdzie posiada³a dwa pola przechowuj¹ce obiekt klasy Avatar
+i Monster. Zainicjuj te pola z wykorzystaniem konstruktora. Nastêpnie zaimplementuj
+metodê fight(), której zadaniem bêdzie przeprowadzenie walki pomiêdzy obiektem klasy
+Avatar i obiektem typu Monster. Walka powinna siê odbywaæ w pêtli dopóki jednemu z
+obiektów nie spadnie poziom health poni¿ej 0. W przypadku okreœlenia wygranej, wypisz
+stosown¹ informacjê na ekranie o zwyciêzcy.
+Zadania stworzone przez Micha³a Skrzekuta oraz Mateusz Burzyñskiego
+
+
+VII. Stwórz klasê Warrior dziedzicz¹c¹ po klasie Avatar. W klasie Warrior, przes³oñ metodê
+attack() z klasy bazowej Avatar, tak, aby wartoœci¹ zwracan¹ w przypadku trzymania w
+polu hand obiektu typu Weapon, by³a wartoœæ baseAttack z uwzglêdnieniem bonusu.
+
+
+VIII. Stwórz klasê Potion, która bêdzie dziedziczy³a po klasie Stuff. Klasa bêdzie mia³a pole
+healAmount okreœlaj¹ce iloœæ zdrowia do przywrócenia. Stwórz konstruktor inicjuj¹cy
+pole oraz metodê getHealAmonunt().
+
+
+IX. Zmodyfikuj metodê attack() w klasach Avatar i Warrior tak, aby w przypadku kiedy w
+polu hand bêdzie trzymany obiekt typu Potion, pole health zosta³o zwiêkszone o
+healAmount oraz zwrócona zosta³a wartoœæ 0.
+
+
+X. Zmodyfikuj klasê Avatar o pole capacity, okreœlaj¹c¹ udŸwig postaci oraz dodaj tak¿e pole
+backpack jako tablicê przechowuj¹c¹ obiekty typu Stuff. Zapewnij odpowiedni
+mechanizm, za pomoc¹ którego do tablicy backpack bêdzie mo¿liwe dodawanie
+przedmiotów. Przy dodawaniu nale¿y sprawdziæ, czy dana postaæ bêdzie w stanie unieœæ
+kolejny przedmiot (nale¿y zsumowaæ wagi przedmiotów i porównaæ z polem capacity).
+
+
+XI. Zaimplementuj mechanizm, który pozwoli klasie Avatar na korzystanie z elementów
+przechowywanych w plecaku(backpack). Obiekt klasy Avatar powinien móc wykonaæ
+atak lub wypiæ miksturê(Potion). Po wypicu mikstury nale¿y dan¹ miksturê uznaæ za
+zu¿yt¹ i wyrzuciæ z plecaka. Nale¿y zastosowaæ mechanizm, który uniemo¿liwi picie kilku
+mikstur pod rz¹d (w kolejnych atakach).
+
+
+XII. **Zaimplementuj mechanizm wypisywania podejmowanych czynnoœci przez obiektu
+Avatar i Monster na konsoli, tak, aby mo¿liwe by³o zobaczenie przebiegu walki.
+XIII. ***Dalsze modyfikacje programu mog¹ opieraæ siê na wprowadzeniu ró¿nych typów
+orê¿y oraz na zmodyfikowaniu klasy Monster, tak aby by³ wra¿liwy na dany typ orê¿a.
+Dalsze rozwijanie programu wskazane, aczkolwiek jest ono opcjonalne.
